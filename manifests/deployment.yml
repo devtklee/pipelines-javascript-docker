@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: devtkleepipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devtkleepipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: devtkleepipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: devtkleepipelinesjavascriptdocker 
+          image: tkcontainerregistryapp.azurecr.io/devtkleepipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
